@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Product Table</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Product Id</th>
+    <th>Image</th>
+  </tr>
+    {% comment %} {% for product in products %}
+    <tr>
+        <td>{{product.title}}</td>
+        <td>{{product.price}}</td>
+        <!--<td>{{product.image}}</td>-->
+    </tr>
+    {% endfor %} {% endcomment %}
+
+  {% for product in products %}
+    <tr>
+        <td>{{product.title}}</td>
+        <td>{{product.price}}</td>
+        <!--<td>{{product.p_id}}</td>-->
+        <td>{{product.img}}</td>
+        <!--<td>{{product.details}}</td>-->
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
